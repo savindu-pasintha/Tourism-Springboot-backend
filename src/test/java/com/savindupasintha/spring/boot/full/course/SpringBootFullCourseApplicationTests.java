@@ -20,14 +20,14 @@ import databasePkg.Database;
 import databasePkg.Doctor;
 import databasePkg.JobRegistration;
 import databasePkg.Login;
-import databasePkg.MedicalPackages;
+import databasePkg.TouristPackages;
 
 import modelsPkg.AppoinmentModel;
 import modelsPkg.CentersModel;
 import modelsPkg.ContactModel;
 import modelsPkg.DoctorModel;
-import modelsPkg.JobRegistrationModel;
-import modelsPkg.MedicalPackagesModel;
+import modelsPkg.RegistrationModel;
+import modelsPkg.TouristPackagesModel;
 
 public class TestJunit {
 
