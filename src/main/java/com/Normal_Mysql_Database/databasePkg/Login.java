@@ -92,14 +92,13 @@ public class Login extends Database {
 
 	public boolean addAdmin(int id,int hotelId,String name,String email,String pass) throws SQLException {
 		super.add("INSERT INTO `admin`(`admin_id`, `hotel_id`, `admin_name`, `admin_email`, `admin_password`) (?,?,?,?,?)");
-		super.pStatment.setInt(1,id);
+		super.pStatment.setInt(1, id);
 		super.pStatment.setInt(2, hotelId);
 		super.pStatment.setString(3, name);
 		super.pStatment.setString(4, email);
-		super.pStatment.setString(5,pass);
+		super.pStatment.setString(5, pass);
 		return super.executeQuery();
 	}
-
 
 	public boolean updateCustomer(int id,String name,String mobile,String email) throws SQLException {
 		super.add("UPDATE `customer` SET ,`cust_name`=?,`cust_email`=?,`cust_phone`=?, WHERE `cust_id`=?");

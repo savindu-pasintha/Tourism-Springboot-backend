@@ -1,13 +1,17 @@
 package com.REST_SERVICE_CONTROLL;
 
 import com.Normal_Mysql_Database.databasePkg.Login;
+import com.Normal_Mysql_Database.modelsPkg.CustomerModel;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
+@Component
 @RestController
 public class PostData {
 
@@ -39,5 +43,10 @@ public class PostData {
 			@PathVariable("email") String e,
 			@PathVariable("password") String p, String request) throws SQLException, ClassNotFoundException {
 		return new Login().addAdmin(id,hi,n,e,p);
+	}
+
+	@PostMapping(value="/api/admin")
+	public ArrayList<CustomerModel> getAllCustomer() throws SQLException, ClassNotFoundException {
+		return new Login().getAllCustomer();
 	}
 }
